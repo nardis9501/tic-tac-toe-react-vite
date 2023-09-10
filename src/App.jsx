@@ -24,7 +24,7 @@ function App() {
     [0, 4, 8],
     [2, 4, 6],
   ];
-  console.log(board);
+
   const checkWinner = (newBoard) => {
     for (const position of WINNER_POSITION) {
       const [a, b, c] = position;
@@ -59,7 +59,6 @@ function App() {
       if (someWinner) {
         confetti();
         setWinner(someWinner);
-        //alert('hay ganador')
       } else if (tie) {
         setWinner(false);
       }
@@ -73,10 +72,10 @@ function App() {
         </div>
         <h1 className="sm:text-5xl text-3xl">Tic Tac Toe</h1>
         <section className="grid grid-cols-3 gap-4 m-4">
-          {board.map((_, index) => {
+          {board.map((square, index) => {
             return (
               <Square key={index} index={index} updateBoard={updateBoard}>
-                {board[index]}
+                {square}
               </Square>
             );
           })}
