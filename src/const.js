@@ -9,6 +9,6 @@ export const WINNER_POSITION = [
   [2, 4, 6],
 ];
 export const TURN = {
-  X: "X",
-  O: "O",
+  X: "✕",
+  O: "❍",
 };
